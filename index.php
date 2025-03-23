@@ -1,9 +1,9 @@
 <?php
 
 $contacts = [
-  ["name" => "Pibu", "numero" => "099309915"],
-  ["name" => "Teba", "numero" => "091529175"],
-  ["name" => "Cochi", "numero" => "099887766"]
+  ["name" => "Pibu", "numero" => "103298478"],
+  ["name" => "Teba", "numero" => "1032984710"],
+  ["name" => "Cochi", "numero" => "013298471"]
 ];
 
 ?>
