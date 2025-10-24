@@ -17,11 +17,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="home.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="add.php">Add Contact</a>
+        </li> -->
+        <!-- botones para registrarte o logearte -->
+         <li class="nav-item">
+          <a class="nav-link" href="login.php">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="register.php">Register</a>
         </li>
       </ul>
     </div>
