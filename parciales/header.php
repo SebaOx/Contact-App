@@ -22,6 +22,14 @@
 
   <!-- Contenido estatico -->
   <link rel="stylesheet" href="./static/css/index.css" />
+  <!-- usamos parse_url para tomar los diferentes componentes que tiene la url
+   y luego solo cargar el path que nos sirve para comparar el condicional de
+   de cuando usar bienvenida.js-->
+  <?php $uri = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);?>
+  <!-- agregamos el js de bienvenida cuando la URI es la correcta -->
+  <?php if ($uri == "/contacts-app/" || $uri == "/contacts-app/index.php"): ?>
+    <script defer src="./static/js/bienvenida.js"></script>
+  <?php endif ?>
 
   <title>Contacts App</title>
 </head>

@@ -37,7 +37,7 @@ $error = null;
         ":phone_number" => $_POST["phone_number"],
       ]);
 
-      header("Location: index.php");
+      header("Location: home.php");
     }
     
   }
