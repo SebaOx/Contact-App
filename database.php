@@ -11,5 +11,5 @@ try{
     dbname=$database", $user, $password);
   
 } catch (PDOException $e) {
-  die("$PDO Conection Error: " . $e->getMessage());
+  die("Conection Error: " . $e->getMessage());
 }
