@@ -67,7 +67,7 @@ $error = null;
               <label for="email" class="col-md-4 col-form-label text-md-end">Email</label>
 
               <div class="col-md-6">
-                <input id="email" type="tel" class="form-control" name="email" required autocomplete="email" autofocus>
+                <input id="email" type="email" class="form-control" name="email" required autocomplete="email" autofocus>
               </div>
             </div>
 
@@ -75,7 +75,7 @@ $error = null;
               <label for="password" class="col-md-4 col-form-label text-md-end">Password</label>
 
               <div class="col-md-6">
-                <input id="password" type="tel" class="form-control" name="password" required autocomplete="password" autofocus>
+                <input id="password" type="password" class="form-control" name="password" required autocomplete="password" autofocus>
               </div>
             </div>
 
