@@ -1,6 +1,15 @@
 <?php
 
 require "database.php";
+
+session_start();
+
+//si la persona no esta logeada redirigimos para que lo haga
+if(!isset($_SESSION["user"])) {
+  header("Location: login.php");
+  return;
+}
+
 //Definimos error y lo usaremos más adelante
 $error = null;
 // Variable superglobales "$_algo", disponible en cualquier archivo de php 

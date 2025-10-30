@@ -2,6 +2,14 @@
 
 require "database.php";
 
+session_start();
+
+//si la persona no esta logeada redirigimos para que lo haga
+if(!isset($_SESSION["user"])) {
+  header("Location: login.php");
+  return;
+}
+
 $contacts = $conn->query("SELECT * FROM contacts");
 
 ?>

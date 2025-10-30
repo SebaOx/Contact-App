@@ -16,21 +16,35 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="home.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="add.php">Add Contact</a>
-        </li> -->
-        <!-- botones para registrarte o logearte -->
-         <li class="nav-item">
-          <a class="nav-link" href="login.php">Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="register.php">Register</a>
-        </li>
-      </ul>
+      <div class="d-flex justify-content-between w-100">
+        <ul class="navbar-nav">
+          <?php if (isset($_SESSION["user"])):?>
+            <li class="nav-item">
+              <a class="nav-link" href="home.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="add.php">Add Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">Logout</a>
+            </li>
+          <?php else: ?>
+            <!-- botones para registrarte o logearte -->
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register.php">Register</a>
+            </li>
+          <?php endif ?>
+        </ul>
+      </div>
+      <!-- chequeamos que el usuario este logeado para mostrar su email -->
+      <?php if (isset($_SESSION["user"])):?>
+        <div class="p-2">
+          <?= $_SESSION["user"]["email"]?>
+        </div>
+      <?php endif ?>
     </div>
   </div>
 </nav>

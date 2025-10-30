@@ -2,6 +2,14 @@
 
 require "database.php";
 
+session_start();
+
+//si la persona no esta logeada redirigimos para que lo haga
+if(!isset($_SESSION["user"])) {
+  header("Location: login.php");
+  return;
+}
+
 $id = $_GET["id"];
 
 //Para evitar que intenten borrar un contacto con id inexistente desde consola o modificando la url
